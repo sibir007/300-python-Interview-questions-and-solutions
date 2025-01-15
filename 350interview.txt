@@ -227,7 +227,7 @@ This returns a random floating point number in the range [0,1)
 
 
 31. Explain how can you access a module written in Python from C?
-Ans: You can access a module written in Python from C by following method, Module = =PyImport_ImportModule(“”);
+Ans: You can access a module written in Python from C by following method, Module = =PyImport_ImportModule("");
 
 
 
@@ -261,7 +261,7 @@ Ans: The use of the split function in Python is that it breaks a string into sho
 
 
 35. Explain what is Flask & its benefits?
-Ans: Flask is a web micro framework for Python based on “Werkzeug, Jinja 2 and good intentions” BSD licensed. Werkzeug and jingja are two of its dependencies.
+Ans: Flask is a web micro framework for Python based on "Werkzeug, Jinja 2 and good intentions" BSD licensed. Werkzeug and jingja are two of its dependencies.
 
 
 
@@ -275,7 +275,7 @@ Flask is part of the micro-framework. Which means it will have little to no depe
 
 
 36. Mention what is the difference between Django, Pyramid, and Flask?
-Ans: Flask is a “micro framework” primarily build for a small application with simpler requirements. In flask, you have to use external libraries. Flask is ready to use.
+Ans: Flask is a "micro framework" primarily build for a small application with simpler requirements. In flask, you have to use external libraries. Flask is ready to use.
 Pyramid are build for larger applications. It provides flexibility and lets the developer use the right tools for their project. The developer can choose the database, URL structure, templating style and more. Pyramid is heavy configurable.
 
 Like Pyramid, Django can also used for larger applications. It includes an ORM.
@@ -316,13 +316,15 @@ Ans: A session basically allows you to remember information from one request to 
 40. Is Flask an MVC model and if yes give an example showing MVC pattern for your application?
 Ans: Basically, Flask is a minimalistic framework which behaves same as MVC framework. So MVC is a perfect fit for Flask, and the pattern for MVC we will consider for the following example
 
+```py
+from flask import Flask
 
-from flask import Flaskapp = Flask(_name_)
-@app.route(“/”)
+app = Flask(_name_)
 
-Def hello():
+@app.route("/")
+def hello():
 
-return “Hello World”
+    return "Hello World"
 
 app.run(debug = True)
 
@@ -333,11 +335,12 @@ from flask import Flask
 app = Flask(_name_)
 
 View part will be
-@app.route(“/”)
+@app.route("/")
 
 Def hello():
 
-return “Hello World”
+return "Hello World"
+```
 
 While you model or main part will be
 app.run(debug = True)
@@ -362,7 +365,7 @@ then run.
 
 
 
-42. What do you mean by python being an “interpreted language”? (Continues from previous question)
+42. What do you mean by python being an "interpreted language"? (Continues from previous question)
 Ans: An interpreted language​is a programming language​for which most of its
 implementations execute instructions directly, without previously compiling a program
 into machine­language​instructions. In context of Python, it means that Python program
@@ -382,7 +385,7 @@ Ans: Indentation.
 
 
 
-44. Please provide an example implementation of a function called “my_func” that returns the square of a given variable “x”. (Continues from previous question)
+44. Please provide an example implementation of a function called "my_func" that returns the square of a given variable "x". (Continues from previous question)
 Ans:
 defmy_func(x):
 returnx**2
@@ -424,10 +427,10 @@ at some other, potentially far removed, place.
 
 
 
-47. Create a unicode string in python with the string “This is a test string”?
+47. Create a unicode string in python with the string "This is a test string"?
 Ans: some_variable=u’Thisisateststring’
 Or
-some_variable=u”Thisisateststring”
+some_variable=u"Thisisateststring"
 
 
 
@@ -462,7 +465,7 @@ passed.
 
 
 
-50.What are the rules for local and global variables in Python?
+50. What are the rules for local and global variables in Python?
 Ans: If a variable is defined outside function then it is implicitly global​. If variable is
 assigned new value inside the function means it is local​. If we want to make it global we
 
@@ -476,7 +479,7 @@ global​
 
 
 
-51.What is the output of the following program?
+51. What is the output of the following program?
 Ans: 
 
 #!/usr/bin/python
@@ -501,7 +504,7 @@ aoutsidefun1:100
 
 
 
-52.What is the output of the following program?
+52. What is the output of the following program?
 Ans:
 
 #!/usr/bin/python
@@ -544,7 +547,7 @@ Ans​.Output:
 4217417
 421534
 
-54.What is the output of the following program?
+54. What is the output of the following program?
 Ans:
 
 #!/usr/bin/python
@@ -565,7 +568,7 @@ used to run the script on a particular system. This is the hardcoded path to the
 interpreter for that particular system. The advantage of this line is that you can use a
 specific python version to run your code.
 
-56.What is the output of the following program?
+56. What is the output of the following program?
 Ans:
 
 list=[‘a’,’b’,’c’,’d’,’e’]
@@ -573,7 +576,7 @@ printlist[10]
 Ans. Output:
 IndexError.Or Error.
 
-57.What is the output of the following program?
+57. What is the output of the following program?
 Ans:
 
 list=[‘a’,’b’,’c’,’d’,’e’]
@@ -603,7 +606,7 @@ since
 {1:’a’,2:’b’}.items()returnsalistof2-Tuple.iisthefirstelement
 oftuplejisthesecond.
 
-60.What are some mutable and immutable data­types/data­structures in
+60. What are some mutable and immutable data­types/data­structures in
 python?
 Ans:
 Mutable Types Immutable Types
@@ -613,7 +616,7 @@ List boolean
 string
 tuple
 
-61.What are generators in Python?
+61. What are generators in Python?
 Ans: Generators are functions that return an iterable collection of items, one at a time, in a set manner. Generators, in general, are used to create iterators with a different approach. They employ the use of yield keyword rather than return to return a generator object.
 Let’s try and build a generator for fibonacci numbers –
 
@@ -643,13 +646,13 @@ for i in fib(10):
 
  
 
-62.What can you use Python generator functions for?
+62. What can you use Python generator functions for?
 Ans: One of the reasons to use generator is to make the solution clearer for some kind
 of solutions.
 The other is to treat results one at a time, avoiding building huge lists of results that you
 would process separated anyway.
 
-63.When is not a good time to use python generators?
+63. When is not a good time to use python generators?
 Ans: Use list instead of generator when:
 1­ You need to access the data multiple times (i.e. cache the results instead of
 recomputing them)
@@ -658,10 +661,10 @@ recomputing them)
 4­ You are using PyPy which sometimes can’t optimize generator code as much
 as it can with normal function calls and list manipulations.
 
-64.What’s your preferred text editor?
+64. What’s your preferred text editor?
 Ans: Emacs. Any alternate answer leads to instant disqualification of the applicant
 
-65.When should you use generator expressions vs. list comprehensions in Python and vice-versa?
+65. When should you use generator expressions vs. list comprehensions in Python and vice-versa?
 Ans: Iterating over the generator expression or the list comprehension will do the same
 thing. However, the list comp will create the entire list in memory first while the
 generator expression will create the items on the fly, so you are able to use it for very
@@ -701,17 +704,17 @@ pass
 Ans:
 First list are mutable while tuples are not, and second tuples can be hashed e.g.
 to be used as keys for dictionaries. As an example of their usage, tuples are used when
-the order of the elements in the sequence matters e.g. a geographic coordinates, “list”
+the order of the elements in the sequence matters e.g. a geographic coordinates, "list"
 of points in a path or route, or set of actions that should be executed in specific order.
 Don’t forget that you can use them a dictionary keys. For everything else use lists
 
-71. What is the function of “self”?
+71. What is the function of "self"?
 Ans:
-“Self” is a variable that represents the instance of the object to itself. In most of
+"Self" is a variable that represents the instance of the object to itself. In most of
 the object oriented programming languages, this is passed to the methods as a hidden
 parameter that is defined by an object. But, in python it is passed explicitly. It refers to
 separate instance of the variable for individual objects. The variables are referred as
-“self.xxx”.
+"self.xxx".
 
 72. How is memory managed in Python?
 Ans:
@@ -735,9 +738,9 @@ try:
 withopen(‘filename’,’r’)asf:
 printf.read()
 exceptIOError:
-print”Nosuchfileexists”
+print"Nosuchfileexists"
 
-75 How do we share global variables across modules in Python?
+75. How do we share global variables across modules in Python?
 Ans:
 We can create a config file and store the entire global variable to be
 shared across modules in it. By simply importing config, the entire global variable
@@ -752,7 +755,7 @@ importconfig
 config.a=1
 config.b=2
 config.c=3
-print”a,b&resp.are:”,config.a,config.b,config.c
+print"a,b&resp.are:",config.a,config.b,config.c
 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
 output of module1.py will be
 123
@@ -816,11 +819,11 @@ threads in the Python process get a chance to run.
 
 84. Print the index of a specific item in a list?
 Ans: use the index() function
->>>[“foo”,”bar”,”baz”].index(‘bar’)
+>>>["foo","bar","baz"].index(‘bar’)
 1
 .
 
-85.How do you iterate over a list and pull element indices at the same time?
+85. How do you iterate over a list and pull element indices at the same time?
 Ans: You are looking for the enumerate function. It takes each element in a sequence
 (like a list) and sticks it’s location right before it. For example:
 
@@ -925,7 +928,7 @@ So, list(set(words)) would remove the duplicates.
 98. Print the length of each line in the file ‘file.txt’ not including any
 whitespaces at the end of the lines?
 Ans:
-withopen(“filename.txt”,”r”)asf1:
+withopen("filename.txt","r")asf1:
 printlen(f1.readline().rstrip())
 rstrip() is an inbuilt function which strips the string from the right end of spaces or tabs
 (whitespace characters).
@@ -974,9 +977,9 @@ deffun():
 y=2333.3
 x=str(y)
 z=repr(y)
-print”y:”,y
-print”str(y):”,x
-print”repr(y):”,z
+print"y:",y
+print"str(y):",x
+print"repr(y):",z
 fun()
 ————-
 output
@@ -1008,16 +1011,16 @@ A sample email is demonstrated below.
 import smtplib
 SERVER = smtplib.SMTP(‘smtp.server.domain’)
 FROM = sender@mail.com
-TO = [“user@mail.com”] # must be a list
-SUBJECT = “Hello!”
-TEXT = “This message was sent with Python’s smtplib.”
+TO = ["user@mail.com"] # must be a list
+SUBJECT = "Hello!"
+TEXT = "This message was sent with Python’s smtplib."
 # Main message
-message = “””
+message = """
 From: Lincoln < sender@mail.com >
 To: CarreerRide user@mail.com
 Subject: SMTP email msg
 This is a test email. Acknowledge the email by responding.
-“”” % (FROM, “, “.join(TO), SUBJECT, TEXT)
+""" % (FROM, ", ".join(TO), SUBJECT, TEXT)
 server = smtplib.SMTP(SERVER)
 server.sendmail(FROM, TO, message)
 server.quit()
@@ -1070,12 +1073,12 @@ form.headers: All of the HTTP headers returned as a dictionary.
 A code snippet of form handling in python:
 importcgi
 form=cgi.FieldStorage()
-ifnot(form.has_key(“name”)andform.has_key(“age”)):
-print”<H1>Name&AgenotEntered</H1>”
-print”FilltheName&Ageaccurately.”
+ifnot(form.has_key("name")andform.has_key("age")):
+print"<H1>Name&AgenotEntered</H1>"
+print"FilltheName&Ageaccurately."
 return
-print”<p>name:”,form[“name”].value
-print”<p>Age:”,form[“age”].value
+print"<p>name:",form["name"].value
+print"<p>Age:",form["age"].value
 
 111. Explain how python is interpreted.
 Ans: Python program runs directly from the source code. Each type Python programs
@@ -1086,7 +1089,7 @@ machine language that is executed. So Python is an Interpreted language.
 112. Explain how to overload constructors (or methods) in Python.?
 Ans. _init__ () is a first
 
-113.What is the difference between List & Tuple in Python.?
+113. What is the difference between List & Tuple in Python.?
 LIST vs TUPLES
 LIST	TUPLES
 Lists are mutable i.e they can be edited.	Tuples are immutable (tuples are lists which can’t be edited).
@@ -1094,7 +1097,7 @@ Lists are slower than tuples.	Tuples are faster than list.
 Syntax: list_1 = [10, ‘Chelsea’, 20]	Syntax: tup_1 = (10, ‘Chelsea’ , 20)
  
 
-114.What are the key features of Python?
+114. What are the key features of Python?
 Ans:
 
 Python is an interpreted language. That means that, unlike languages like C and its variants, Python does not need to be compiled before it is run. Other interpreted languages include PHP and Ruby.
@@ -1102,13 +1105,13 @@ Python is dynamically typed, this means that you don’t need to state the types
 Python is well suited to object orientated programming in that it allows the definition of classes along with composition and inheritance. Python does not have access specifiers (like C++’s public, private).
 In Python, functions are first-class objects. This means that they can be assigned to variables, returned from other functions and passed into functions. Classes are also first class objects
 Writing Python code is quick but running it is often slower than compiled languages. Fortunately，Python allows the inclusion of C based extensions so bottlenecks can be optimized away and often are. The numpy package is a good example of this, it’s really quite quick because a lot of the number crunching it does isn’t actually done by Python
-Python finds use in many spheres – web applications, automation, scientific modeling, big data applications and many more. It’s also often used as “glue” code to get other languages and components to play nice.
+Python finds use in many spheres – web applications, automation, scientific modeling, big data applications and many more. It’s also often used as "glue" code to get other languages and components to play nice.
  
 
-115.How is Python an interpreted language?
+115. How is Python an interpreted language?
 Ans: An interpreted language is any programming language which is not in machine level code before runtime. Therefore, Python is an interpreted language.
 
-116.How is memory managed in Python?
+116. How is memory managed in Python?
 Ans:
 
 Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
@@ -1116,7 +1119,7 @@ The allocation of heap space for Python objects is done by Python’s memory man
 Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
  
 
- 117.What is PYTHONPATH?
+117. What is PYTHONPATH?
 Ans:It is an environment variable which is used when a module is imported. Whenever a module is imported, PYTHONPATH is also looked up to check for the presence of the imported modules in various directories. The interpreter uses it to determine which module to load.
 
 118. What are python modules? Name some commonly used built-in modules in Python?
@@ -1130,7 +1133,7 @@ math
 random
 data time
 JSON
-119.What are local variables and global variables in Python?
+119. What are local variables and global variables in Python?
 Ans:
 
 Global Variables:
@@ -1162,7 +1165,7 @@ When you try to access the local variable outside the function add(), it will th
 120. Is python case sensitive?
 Ans:Yes. Python is a case sensitive language.
 
-121.What is type conversion in Python?
+121. What is type conversion in Python?
 Ans:Type conversion refers to the conversion of one data type iinto another.
 
 int() – converts any data type into integer type
@@ -1234,7 +1237,7 @@ print("Hi, Welcome to Edureka")
 Newfunc(); #calling the function
 Output: Hi, Welcome to Edureka
 
-126.What is __init__?
+126. What is __init__?
 Ans:__init__ is a method or constructor in Python. This method is automatically called to allocate memory when a new object/ instance of a class is created. All classes have the __init__ method.
 
 Here is an example of how to use it.
@@ -1273,7 +1276,7 @@ XYZ
 
  
 
-127.What is a lambda function?
+127. What is a lambda function?
 Ans:An anonymous function is known as a lambda function. This function can have any number of parameters but, can have just one statement.
 
 Example:
@@ -1376,7 +1379,7 @@ Output: abcd
 140. How to comment multiple lines in python?
 Ans: Multi-line comments appear in more than one line. All the lines to be commented are to be prefixed by a #. You can also a very good shortcut method to comment multiple lines. All you need to do is hold the ctrl key and left click in every place wherever you want to include a # character and type a # just once. This will comment all the lines where you introduced your cursor.
 
-141.What are docstrings in Python?
+141. What are docstrings in Python?
 Ans:Docstrings are not actually comments, but, they are documentation strings. These docstrings are within triple quotes. They are not assigned to any variable and therefore, at times, serve the purpose of comments as well.
 
 Example:
@@ -1402,7 +1405,7 @@ Output: 2.0
 141. What is the purpose of is, not and in operators?
 Ans:Operators are special functions. They take one or more values and produce a corresponding result.
 
-is: returns true when 2 operands are true  (Example: “a” is ‘a’)
+is: returns true when 2 operands are true  (Example: "a" is ‘a’)
 
 not: returns the inverse of the boolean value
 
@@ -1419,7 +1422,7 @@ Ans:
 Whenever Python exits, especially those Python modules which are having circular references to other objects or the objects that are referenced from the global namespaces are not always de-allocated or freed.
 It is impossible to de-allocate those portions of memory that are reserved by the C library.
 On exit, because of having its own efficient clean up mechanism, Python would try to de-allocate/destroy every other object.
-143. What is a dictionary in Python?
+144. What is a dictionary in Python?
 Ans: The built-in datatypes in Python is called dictionary. It defines one-to-one relationship between keys and values. Dictionaries contain pair of keys and their corresponding values. Dictionaries are indexed by keys.
 
 Let’s take an example:
@@ -1437,7 +1440,7 @@ Delhi
 1
 print dict[PM]
 Modi
-144. How can the ternary operators be used in python?
+145. How can the ternary operators be used in python?
 Ans: The Ternary operator is the operator that is used to show the conditional statements. This consists of the true or false values with a statement that has to be evaluated for it.
 
 Syntax:
@@ -1461,10 +1464,10 @@ Example:
 2
 stg='ABCD'
 len(stg)
-148. Explain split(), sub(), subn() methods of “re” module in Python.
-Ans: To modify the strings, Python’s “re” module is providing 3 methods. They are:
+148. Explain split(), sub(), subn() methods of "re" module in Python.
+Ans: To modify the strings, Python’s "re" module is providing 3 methods. They are:
 
-split() – uses a regex pattern to “split” a given string into a list.
+split() – uses a regex pattern to "split" a given string into a list.
 sub() – finds all substrings where the regex pattern matches and then replace them with a different string
 subn() – it is similar to sub() and also returns the new string along with the no. of replacements.
 149. What are negative indexes and why are they used?
@@ -1476,7 +1479,7 @@ The negative index is used to remove any new-line spaces from the string and all
 
 150. What are Python packages?
 Ans: Python packages are namespaces containing multiple modules.
-151.How can files be deleted in Python?
+151. How can files be deleted in Python?
 Ans: To delete a file in Python, you need to import the OS Module. After that, you need to use the os.remove() function.
 
 Example:
@@ -1498,7 +1501,7 @@ Built-in functions
 Ans:
 
 Python’s lists are efficient general-purpose containers. They support (fairly) efficient insertion, deletion, appending, and concatenation, and Python’s list comprehensions make them easy to construct and manipulate.
-They have certain limitations: they don’t support “vectorized” operations like elementwise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
+They have certain limitations: they don’t support "vectorized" operations like elementwise addition and multiplication, and the fact that they can contain objects of differing types mean that Python must store type information for every element, and must execute type dispatching code when operating on each element.
 NumPy is not just more efficient; it is also more convenient. You get a lot of vector and matrix operations for free, which sometimes allow one to avoid unnecessary work. And they are also efficiently implemented.
 NumPy array is faster and You get a lot built in with NumPy, FFTs, convolutions, fast searching, basic statistics, linear algebra, histograms, etc.
 154. How to add values to a python array?
@@ -1674,7 +1677,7 @@ Ans: Encapsulation means binding the code and the data together. A Python class 
 169. How do you do data abstraction in Python?
 Ans: Data Abstraction is providing only the required details and hiding the implementation from the world. It can be achieved in Python by using interfaces and abstract classes.
 
-170.Does python make use of access specifiers?
+170. Does python make use of access specifiers?
 Ans: Python does not deprive access to an instance variable or function. Python lays down the concept of prefixing the name of the variable, function or method with a single or double underscore to imitate the behavior of protected and private access specifiers.
 171. How to create an empty class in Python?
 Ans: An empty class is a class that does not have any code defined within its block. It can be created using the pass keyword. However, you can create objects of this class outside the class itself. IN PYTHON THE PASS command does nothing when its executed. it’s a null statement.
@@ -1694,7 +1697,7 @@ Output:
 Name =  xyz
  
 
-172.What’s The Process To Get The Home Directory Using ‘~’ In Python?
+172. What’s The Process To Get The Home Directory Using ‘~’ In Python?
 Ans: You need to import the os module, and then just a single line would do the rest.
 
 import os
@@ -1704,17 +1707,17 @@ Output:
 /home/runner
  
 
-173.How To Find Bugs Or Perform Static Analysis In A Python Application?
+173. How To Find Bugs Or Perform Static Analysis In A Python Application?
 Ans:
 
 You can use PyChecker, which is a static analyzer. It identifies the bugs in Python project and also reveals the style and complexity related bugs.
 Another tool is Pylint, which checks whether the Python module satisfies the coding standard.
-174.When Is The Python Decorator Used?
+174. When Is The Python Decorator Used?
 Ans: Python decorator is a relative change that you do in Python syntax to adjust the functions quickly.
 
  
 
-175.Can Python be used for web client and web server side programming? And which one is best suited to Python?
+175. Can Python be used for web client and web server side programming? And which one is best suited to Python?
 Ans:  Python is best suited for web server-side application development due to its vast set of features for creating business logic, database interactions, web server hosting etc.
 
 However, Python can be used as a web client-side application which needs some conversions for a browser to interpret the client side logic. Also, note that Python can be used to create desktop applications which can run as a standalone application such as utilities for test automation.
@@ -1727,12 +1730,12 @@ Extensive support of modules for any kind of application development including d
 An excellent support community to get your answers.
  
 
-177.What is the type () in Python?
+177. What is the type () in Python?
 Ans: The built-in method which decides the types of the variable at the program runtime is known as type() in Python. When a single argument is passed through it, then it returns given object type. When 3 arguments pass through this, then it returns a new object type.
 
  
 
-178.What are the key points of Python?
+178. What are the key points of Python?
 Ans:
 
 Similar to PERL and PHP, Python is processed by the interpreter at runtime. Python supports Object-Oriented style of programming, which encapsulates code within objects.
@@ -1743,15 +1746,15 @@ Works for scripting, embedded code and compiled the code.
 Detailed
  
 
-179.How is memory managed in Python?
+179. How is memory managed in Python?
 Ans: Memory is managed by the private heap space. All objects and data structures are located in a private heap, and the programmer has no access to it. Only the interpreter has access. Python memory manager allocates heap space for objects. The programmer is given access to some tools for coding by the core API. The inbuilt garbage collector recycles the unused memory and frees up the memory to make it available for the heap space.
 
-180.What tools can help find bugs or perform the static analysis?
+180. What tools can help find bugs or perform the static analysis?
 Ans: For performing Static Analysis, PyChecker is a tool that detects the bugs in source code and warns the programmer about the style and complexity. Pylint is another tool that authenticates whether the module meets the coding standard.
 
  
 
- 181.How Does Python Handle Memory Management?
+181. How Does Python Handle Memory Management?
 Ans:
 
 Python uses private heaps to maintain its memory. So the heap holds all the Python objects and the data structures. This area is only accessible to the Python interpreter; programmers can’t use it.
@@ -1759,7 +1762,7 @@ And it’s the Python memory manager that handles the Private heap. It does the 
 Python employs a built-in garbage collector, which salvages all the unused memory and offloads it to the heap space.
  
 
- 182.What Are The Principal Differences Between The Lambda And Def?
+182. What Are The Principal Differences Between The Lambda And Def?
 Ans:
 
 Lambda Vs. Def.
@@ -1769,16 +1772,16 @@ Def can have a return statement. Lambda can’t have return statements.
 Lambda supports to get used inside a list and dictionary.
  
 
-183.Write A Reg Expression That Confirms An Email Id Using The Python Reg Expression Module “Re”?
-Ans: Python has a regular expression module “re.”
+183. Write A Reg Expression That Confirms An Email Id Using The Python Reg Expression Module "Re"?
+Ans: Python has a regular expression module "re."
 
-Check out the “re” expression that can check the email id for .com and .co.in subdomain.
+Check out the "re" expression that can check the email id for .com and .co.in subdomain.
 
 import re
 print(re.search(r"[0-9a-zA-Z.]+@[a-zA-Z]+\.(com|co\.in)$","micheal.pages@mp.com"))
  
 
-184.What Do You Think Is The Output Of The Following Code Fragment? Is There Any Error In The Code?
+184. What Do You Think Is The Output Of The Following Code Fragment? Is There Any Error In The Code?
 Ans:
 
 list = ['a', 'b', 'c', 'd', 'e']
@@ -1794,7 +1797,7 @@ Ans: No, Python does not have a Switch statement, but you can write a Switch fun
 
  
 
-186.What Is A Built-In Function That Python Uses To Iterate Over A Number Sequence?
+186. What Is A Built-In Function That Python Uses To Iterate Over A Number Sequence?
 Ans: Range() generates a list of numbers, which is used to iterate over for loops.
 
 for i in range(5):
@@ -1813,16 +1816,16 @@ Parameters can be positive or negative.
 The range() function in Python starts from the zeroth index.
  
 
-187.What Are The Optional Statements Possible Inside A Try-Except Block In Python?
+187. What Are The Optional Statements Possible Inside A Try-Except Block In Python?
 Ans: There are two optional clauses you can use in the try-except block.
 
-The “else” clause
+The "else" clause
 It is useful if you want to run a piece of code when the try block doesn’t create an exception.
-The “finally” clause
+The "finally" clause
 It is useful when you want to execute some steps which run, irrespective of whether there occurs an exception or not.
  
 
-188.What Is A String In Python?
+188. What Is A String In Python?
 Ans: A string in Python is a sequence of alpha-numeric characters. They are immutable objects. It means that they don’t allow modification once they get assigned a value. Python provides several methods, such as join(), replace(), or split() to alter strings. But none of these change the original object.
 
 189. What Is Slicing In Python?
@@ -1833,12 +1836,12 @@ Ans: Python has support for formatting any value into a string. It may contain q
 
 One of the common usages is to push values into a string with the %s format specifier. The formatting operation in Python has the comparable syntax as the C function printf() has.
 
-191.What Is The Index In Python?
+191. What Is The Index In Python?
 Ans: An index is an integer data type which denotes a position within an ordered list or a string.
 
 In Python, strings are also lists of characters. We can access them using the index which begins from zero and goes to the length minus one.
 
-For example, in the string “Program,” the indexing happens like this:
+For example, in the string "Program," the indexing happens like this:
 
 Program 0 1 2 3 4 5
 192. What Is Docstring In Python?
@@ -1850,7 +1853,7 @@ A docstring gets added to the __doc__ attribute of the string object.
 
  
 
-193.What Is A Function In Python Programming?
+193. What Is A Function In Python Programming?
 Ans: A function is an object which represents a block of code and is a reusable entity. It brings modularity to a program and a higher degree of code reusability.
 
 Python has given us many built-in functions such as print() and provides the ability to create user-defined functions.
@@ -1858,9 +1861,9 @@ Python has given us many built-in functions such as print() and provides the abi
 194. How Many Basic Types Of Functions Are Available In Python?
 Ans: Python gives us two basic types of functions.
 
-1. Built-in, and
+- Built-in, and
 
-2. User-defined.
+- User-defined.
 
 The built-in functions happen to be part of the Python language. Some of these are print(), dir(), len(), and abs() etc.
 
@@ -1881,13 +1884,13 @@ Ans: The purpose of a function is to receive the inputs and return some output.
 
 The return is a Python statement which we can use in a function for sending a value back to its caller.
 
-198. What Is “Call By Value” In Python?
+198. What Is "Call By Value" In Python?
 Ans: In call-by-value, the argument whether an expression or a value gets bound to the respective variable in the function.
 
 Python will treat that variable as local in the function-level scope. Any changes made to that variable will remain local and will not reflect outside the function.
 
-199. What Is “Call By Reference” In Python?
-Ans: We use both “call-by-reference” and “pass-by-reference” interchangeably. When we pass an argument by reference, then it is available as an implicit reference to the function, rather than a simple copy. In such a case, any modification to the argument will also be visible to the caller.
+199. What Is "Call By Reference" In Python?
+Ans: We use both "call-by-reference" and "pass-by-reference" interchangeably. When we pass an argument by reference, then it is available as an implicit reference to the function, rather than a simple copy. In such a case, any modification to the argument will also be visible to the caller.
 
 This scheme also has the advantage of bringing more time and space efficiency because it leaves the need for creating local copies.
 
@@ -1901,7 +1904,7 @@ Ans: It is not at all necessary for a function to return any value. However, if 
 202. What Does The Continue Do In Python?
 Ans: The continue is a jump statement in Python which moves the control to execute the next iteration in a loop leaving all the remaining instructions in the block unexecuted.
 
-The continue statement is applicable for both the “while” and “for” loops.
+The continue statement is applicable for both the "while" and "for" loops.
 
 203. What Is The Purpose Of Id() Function In Python?
 Ans: The id() is one of the built-in functions in Python.
@@ -1931,7 +1934,7 @@ Learning
 Python
  
 
-205.Does Python Have A Main() Method?
+205. Does Python Have A Main() Method?
 Ans: The main() is the entry point function which happens to be called first in most programming languages.
 
 Since Python is interpreter-based, so it sequentially executes the lines of the code one-by-one.
@@ -1954,9 +1957,9 @@ Testing the main function
 206. What Does The __ Name __ Do In Python?
 Ans: The __name__ is a unique variable. Since Python doesn’t expose the main() function, so when its interpreter gets to run the script, it first executes the code which is at level 0 indentation.
 
-To see whether the main() gets called, we can use the __name__ variable in an if clause compares with the value “__main__.”
+To see whether the main() gets called, we can use the __name__ variable in an if clause compares with the value "__main__."
 
-207. What Is The Purpose Of “End” In Python?
+207. What Is The Purpose Of "End" In Python?
 Ans: Python’s print() function always prints a newline in the end. The print() function accepts an optional parameter known as the ‘end.’ Its value is ‘\n’ by default. We can change the end character in a print statement with the value of our choice using this parameter.
 
 # Example: Print a  instead of the new line in the end.
@@ -1970,14 +1973,14 @@ The output is:
 
 Let's learn Python
 Learn to code from techbeamers.com
-208. When Should You Use The “Break” In Python?
+208. When Should You Use The "Break" In Python?
 Ans: Python provides a break statement to exit from a loop. Whenever the break hits in the code, the control of the program immediately exits from the body of the loop.
 
 The break statement in a nested loop causes the control to exit from the inner iterative block.
 
  
 
-209.What Is The Difference Between Pass And Continue In Python?
+209. What Is The Difference Between Pass And Continue In Python?
 Ans: The continue statement makes the loop to resume from the next iteration.
 
 On the contrary, the pass statement instructs to do nothing, and the remainder of the code executes as usual.
@@ -2014,10 +2017,10 @@ test_str = 'Programming    '
 print(test_str.rstrip())
  
 
-214.What Is Whitespace In Python?
+214. What Is Whitespace In Python?
 Ans: Whitespace represents the characters that we use for spacing and separation.
 
-They possess an “empty” representation. In Python, it could be a tab or space.
+They possess an "empty" representation. In Python, it could be a tab or space.
 
 215. What Is Isalpha() In Python?
 Ans: Python provides this built-in isalpha() function for the string handling purpose.
@@ -2072,7 +2075,7 @@ This heap manager does the allocation/de-allocation of heap space for objects.
 
  
 
-224.What Is The Set Object In Python?
+224. What Is The Set Object In Python?
 Ans: Sets are unordered collection objects in Python. They store unique and immutable objects. Python has its implementation derived from mathematics.
 
 225. What Is The Use Of The Dictionary In Python?
@@ -2089,12 +2092,12 @@ Here are some Python interview questions on classes and objects
 
  
 
-227.What Is Class In Python?
+227. What Is Class In Python?
 Ans: Python supports object-oriented programming and provides almost all OOP features to use in programs.
 
 A Python class is a blueprint for creating the objects. It defines member variables and gets their behavior associated with them.
 
-We can make it by using the keyword “class.” An object gets created from the constructor. This object represents the instance of the class.
+We can make it by using the keyword "class." An object gets created from the constructor. This object represents the instance of the class.
 
 In Python, we generate classes and instances in the following way.
 
@@ -2133,7 +2136,7 @@ Ans: We can specify the values for the attributes at runtime. We need to add an 
 >>> man = Human("Manager")
 >>> print(man.profession)
 Manager
- 230.What Is Inheritance In Python Programming?
+230. What Is Inheritance In Python Programming?
 Ans: Inheritance is an OOP mechanism which allows an object to access its parent class features. It carries forward the base class functionality to the child.
 
 Python Interview Questions - Inheritance
@@ -2166,7 +2169,7 @@ Xeon Mac OS High Sierra 32 GB
 Xeon Windows 10 Pro 64 16 GB
  
 
-231.What Is Composition In Python?
+231. What Is Composition In Python?
 Ans: The composition is also a type of inheritance in Python. It intends to inherit from the base class but a little differently, i.e., by using an instance variable of the base class acting as a member of the derived class.
 
 See the below diagram.
@@ -2205,7 +2208,7 @@ Tablet with i7 CPU & 16 GB ram by Intel
 
 
 
-232.What Are Errors And Exceptions In Python Programs?
+232. What Are Errors And Exceptions In Python Programs?
 Ans: Errors are coding issues in a program which may cause it to exit abnormally.
 
 On the contrary, exceptions happen due to the occurrence of an external event which interrupts the normal flow of the program.
@@ -2249,7 +2252,7 @@ Enter an odd number- 1
 Value entered is : 1
 Enter an odd number-
 235. What Are Python Iterators?
-Ans: Iterators in Python are array-like objects which allow moving on the next element. We use them in traversing a loop, for example, in a “for” loop.
+Ans: Iterators in Python are array-like objects which allow moving on the next element. We use them in traversing a loop, for example, in a "for" loop.
 
 Python library has a no. of iterators. For example, a list is also an iterator and we can start a for loop over it.
 
@@ -2259,7 +2262,7 @@ Ans: The collection type like a list, tuple, dictionary, and set are all iterabl
 Here are some advanced-level Python interview questions.
 
 237. What Are Python Generators?
-Ans: A Generator is a kind of function which lets us specify a function that acts like an iterator and hence can get used in a “for” loop.
+Ans: A Generator is a kind of function which lets us specify a function that acts like an iterator and hence can get used in a "for" loop.
 
 In a generator function, the yield keyword substitutes the return statement.
 
@@ -2277,7 +2280,7 @@ The output is:
 Python Generator function.
  
 
-238.What Are Closures In Python?
+238. What Are Closures In Python?
 Ans: Python closures are function objects returned by another function. We use them to eliminate code redundancy.
 
 In the example below, we’ve written a simple closure for multiplying numbers.
@@ -2322,9 +2325,9 @@ Before the function call
 After the function call
 9
 240. How Do You Create A Dictionary In Python?
-Ans: Let’s take the example of building site statistics. For this, we first need to break up the key-value pairs using a colon(“:”). The keys should be of an immutable type, i.e., so we’ll use the data-types which don’t allow changes at runtime. We’ll choose from an int, string, or tuple.
+Ans: Let’s take the example of building site statistics. For this, we first need to break up the key-value pairs using a colon(":"). The keys should be of an immutable type, i.e., so we’ll use the data-types which don’t allow changes at runtime. We’ll choose from an int, string, or tuple.
 
-However, we can take values of any kind. For distinguishing the data pairs, we can use a comma(“,”) and keep the whole stuff inside curly braces({…}).
+However, we can take values of any kind. For distinguishing the data pairs, we can use a comma(",") and keep the whole stuff inside curly braces({…}).
 
  >>> site_stats = {'site': 'tecbeamers.com', 'traffic': 10000, "type": "organic"}
 >>> type(site_stats)
@@ -2332,7 +2335,7 @@ However, we can take values of any kind. For distinguishing the data pairs, we c
 >>> print(site_stats)
 {'type': 'organic', 'site': 'tecbeamers.com', 'traffic': 10000}
 241. How Do You Read From A Dictionary In Python?
-Ans:To fetch data from a dictionary, we can directly access using the keys. We can enclose a “key” using brackets […] after mentioning the variable name corresponding to the dictionary.
+Ans:To fetch data from a dictionary, we can directly access using the keys. We can enclose a "key" using brackets […] after mentioning the variable name corresponding to the dictionary.
 
 >>> site_stats = {'site': 'tecbeamers.com', 'traffic': 10000, "type": "organic"}
 >>> print(site_stats["traffic"])
@@ -2342,7 +2345,7 @@ We can even call the get method to fetch the values from a dict. It also let us 
 >>> print(site_stats.get('site'))
 tecbeamers.com
 242. How Do You Traverse Through A Dictionary Object In Python?
-Ans: We can use the “for” and “in” loop for traversing the dictionary object.
+Ans: We can use the "for" and "in" loop for traversing the dictionary object.
 
 >>> site_stats = {'site': 'tecbeamers.com', 'traffic': 10000, "type": "organic"}
 >>> for k, v in site_stats.items():
@@ -2394,7 +2397,7 @@ organic
 >>> print(site_stats)
 {'site': 'tecbeamers.com', 'traffic': 10000}
 245. How Do You Check The Presence Of A Key In A Dictionary?
-Ans: We can use Python’s “in” operator to test the presence of a key inside a dict object.
+Ans: We can use Python’s "in" operator to test the presence of a key inside a dict object.
 
 >>> site_stats = {'site': 'tecbeamers.com', 'traffic': 10000, "type": "organic"}
 >>> 'site' in site_stats
@@ -2442,9 +2445,9 @@ Yes
 250. What Do You Know About The Python Enumerate?
 Ans: While using the iterators, sometimes we might have a use case to store the count of iterations. Python gets this task quite easy for us by giving a built-in method known as the enumerate().
 
-The enumerate() function attaches a counter variable to an iterable and returns it as the “enumerated” object.
+The enumerate() function attaches a counter variable to an iterable and returns it as the "enumerated" object.
 
-We can use this object directly in the “for” loops or transform it into a list of tuples by calling the list() method. It has the following signature:
+We can use this object directly in the "for" loops or transform it into a list of tuples by calling the list() method. It has the following signature:
 
 enumerate(iterable, to_begin=0)
 Arguments:
@@ -2567,7 +2570,7 @@ The syntax would look like the one given below.
 x, y = 35, 75
 smaller = x if x < y else y
 print(smaller)
-255. What Does The “Self” Keyword Do?
+255. What Does The "Self" Keyword Do?
 Ans: The self is a Python keyword which represents a variable that holds the instance of an object.
 
 In almost, all the object-oriented languages, it is passed to the methods as a hidden parameter.
@@ -2581,7 +2584,7 @@ It’ll return a shallow copy of the parameter.
 copy.deepcopy() function
 It also produces the copy of an object from the source to destination.
 It’ll return a deep copy of the parameter that you can pass to the function.
-257: What Is The Purpose Of Docstrings In Python?
+257. What Is The Purpose Of Docstrings In Python?
 Ans: In Python, the docstring is what we call as the docstrings. It sets a process of recording Python functions, modules, and classes.
 
 258. Which Python Function Will You Use To Convert A Number To A String?
@@ -2815,8 +2818,8 @@ return a+b
 Ans:  For any kind of statements, we possibly need to define a block of code under them. However, Python does not support curly braces. This means we must end such statements with colons and then indent the blocks under those with the same amount.
 
 >>> if 3>1:
-print(“Hello”)
-print(“Goodbye”)
+print("Hello")
+print("Goodbye")
 Hello
 
 Goodbye
@@ -2896,7 +2899,7 @@ filter()- Filters in items for which the condition is true.
 
 format()- Lets us format a string.
 
->>> print(“a={0} but b={1}”.format(a,b))
+>>> print("a={0} but b={1}".format(a,b))
 a=2 but b=3
 
 hash()- Returns the hash value of an object.
@@ -3058,7 +3061,7 @@ Numbers – Numbers use to hold numerical values.
 >>>
 Strings – A string is a sequence of characters. We declare it using single or double quotes.
 
->>> title=“Ayushi’s Book”
+>>> title="Ayushi’s Book"
 Lists – A list is an ordered collection of values, and we declare it using square brackets.
 
 >>> colors=[‘red’,‘green’,‘blue’]
@@ -3071,7 +3074,7 @@ Tuples – A tuple, like a list, is an ordered collection of values. The differe
 >>> name[0]=‘Avery’
 Traceback (most recent call last):
 
-File “<pyshell#129>”, line 1, in <module>
+File "<pyshell#129>", line 1, in <module>
 
 name[0]=’Avery’
 
@@ -3342,11 +3345,11 @@ while(n==7):print(n)
 
 Traceback (most recent call last):
 
-File “<pyshell#332>”, line 1, in <module>
+File "<pyshell#332>", line 1, in <module>
 
 counterfunc(7)
 
-File “<pyshell#331>”, line 2, in counterfunc
+File "<pyshell#331>", line 2, in counterfunc
 
 while(n==7):print(n)
 
@@ -3431,34 +3434,6 @@ Reduce repeatedly reduces a sequence pair-wise until we reach a single value.
 >>> from functools import reduce
 >>> reduce(lambda x,y:x-y,[1,2,3,4,5])
 -13
-
-300. Explain a few methods to implement Functionally Oriented Programming in Python?
-Ans: 
-
-Sometimes, when we want to iterate over a list, a few methods come in handy.
-
-a. filter()
-
-Filter lets us filter in some values based on conditional logic.
-
->>> list(filter(lambda x:x>5,range(8)))
-[6, 7]
-
-b. map()
-
-Map applies a function to every element in an iterable.
-
->>> list(map(lambda x:x**2,range(8)))
-[0, 1, 4, 9, 16, 25, 36, 49]
-c. reduce()
-
-Reduce repeatedly reduces a sequence pair-wise until we reach a single value.
-
->>> from functools import reduce
->>> reduce(lambda x,y:x-y,[1,2,3,4,5])
--13
-
- 
 
 301. Is del the same as remove()? What are they?
 Ans: 
@@ -3623,27 +3598,27 @@ Easier-to-understand code.
 
  
 
-312. Can you remove the whitespaces from the string “aaa bbb ccc ddd eee”?
+312. Can you remove the whitespaces from the string "aaa bbb ccc ddd eee"?
 Ans: I can think of three ways to do this.
 
 Using join-
 
 >>> s=‘aaa bbb ccc ddd eee’
->>> s1=”.join(s.split())
+>>> s1=".join(s.split())
 >>> s1
 ‘aaabbbcccdddeee’
 
 Using a list comprehension–
 
 >>> s=‘aaa bbb ccc ddd eee’
->>> s1=str(”.join(([i for i in s if i!=‘ ‘])))
+>>> s1=str(".join(([i for i in s if i!=‘ ‘])))
 >>> s1
 ‘aaabbbcccdddeee’
 
 Using replace()-
 
 >>> s=‘aaa bbb ccc ddd eee’
->>> s1 = s.replace(‘ ‘,”)
+>>> s1 = s.replace(‘ ‘,")
 >>> s1
 ‘aaabbbcccdddeee’
 
@@ -3692,7 +3667,7 @@ itertools– Supports working with permutations, combinations, and other useful 
 with open(‘tabs.txt’,‘r’) as f:
 print(f.read())
 except IOError:
-print(“File not found”)
+print("File not found")
  
 
  
@@ -3708,7 +3683,7 @@ Install virtualenv via pip: $ pip install virtualenv.
 
  
 
-318. What is the function of “self”?
+318. What is the function of "self"?
 Ans: Self is a variable that represents the instance of the object to itself. In most of the object oriented programming language, this is passed to the methods as a hidden parameters that is defined by an object. But, in python, it is declared and passed explicitly. It is the first argument that gets created in the instance of the class A and the parameters to the methods are passed automatically. It refers to separate instance of the variable for individual objects.
 
 Let’s say you have a class ClassA which contains a method methodA defined as:
@@ -3758,7 +3733,7 @@ Here’s a breakdown of the important differences between Wheel and Egg.
 
 Wheel has an official PEP. Egg did not.
 Wheel is a distribution format, i.e a packaging format. 1 Egg was both a distribution format and a runtime installation format (if left zipped), and was designed to be importable.
-Wheel archives do not include .pyc files. Therefore, when the distribution only contains Python files (i.e. no compiled extensions), and is compatible with Python 2 and 3, it’s possible for a wheel to be “universal”, similar to an sdist.
+Wheel archives do not include .pyc files. Therefore, when the distribution only contains Python files (i.e. no compiled extensions), and is compatible with Python 2 and 3, it’s possible for a wheel to be "universal", similar to an sdist.
 Wheel uses PEP376-compliant .dist-info directories. Egg used .egg-info.
 Wheel has a richer file naming convention. A single wheel archive can indicate its compatibility with a number of Python language versions and implementations, ABIs, and system architectures.
 Wheel is versioned. Every wheel file contains the version of the wheel specification and the implementation that packaged it.
@@ -3809,7 +3784,7 @@ CompressionWebpackPlugin – Prepare compressed versions of assets to serve them
 324. Webpack gives us a dependency graph. What does that mean?
 Ans:  Any time one file depends on another, webpack treats this as a dependency. This allows webpack to take non-code assets, such as images or web fonts, and also provide them as dependencies for your application.
 
-Webpack lets you use require() on local “static assets”:
+Webpack lets you use require() on local "static assets":
 
 <img src={ require('../../assets/logo.png') } />  
 When webpack processes your application, it starts from a list of modules defined on the command line or in its config file. Starting from these entry points, webpack recursively builds a dependency graph that includes every module your application needs, then packages all of those modules into a small number of bundles – often, just one – to be loaded by the browser.
@@ -3950,12 +3925,12 @@ Ans:  The answer here is no. The modules with circular references to other objec
 
  
 
-333. What is the purpose of the single underscore “_” variable in Python?
+333. What is the purpose of the single underscore "_" variable in Python?
 Ans: has 4 main conventional uses in Python:
 
 To hold the result of the last executed expression(/statement) in an interactive interpreter session. This precedent was set by the standard CPython interpreter, and other interpreters have followed suit
 For translation lookup in i18n (see the gettext documentation for example), as in code like: raise forms.ValidationError(_("Please enter a correct username"))
-As a general purpose “throwaway” variable name to indicate that part of a function result is being deliberately ignored (Conceptually, it is being discarded.), as in code like: label, has_label, _ = text.partition(':').
+As a general purpose "throwaway" variable name to indicate that part of a function result is being deliberately ignored (Conceptually, it is being discarded.), as in code like: label, has_label, _ = text.partition(':').
 As part of a function definition (using either def or lambda), where the signature is fixed (e.g. by a callback or parent class API), but this particular function implementation doesn’t need all of the parameters, as in code like: callback = lambda _: True
  
 
