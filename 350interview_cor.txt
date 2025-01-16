@@ -278,12 +278,12 @@ global​
 Ans: 
 #!/usr/bin/python
 deffun1(a):
-print’a:’,a
+print("a:", ,a)
 a=33;
-print’locala:’,a
+print("locala:", ,a)
 a=100
 fun1(a)
-print’aoutsidefun1:’,a
+print("aoutsidefun1:", ,a)
 Ans. Output:
 a:100
 locala:33
@@ -295,9 +295,9 @@ Ans:
 #!/usr/bin/python
 deffun2():
 globalb
-print’b:’,b
+print("b:", ,b)
 b=33
-print’globalb:’,b
+print("globalb:", ,b)
 b=100
 fun2()
 print’boutsidefun2′,b
@@ -540,7 +540,7 @@ importconfig
 config.a=1
 config.b=2
 config.c=3
-print"a,b&resp.are:",config.a,config.b,config.c
+print("a,b&resp.are:",config.a,config.b,config.c)
 ­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­­
 output of module1.py will be
 123
